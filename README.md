@@ -176,7 +176,7 @@ This project is a collaborative effort by students from the **Indian Institute o
 | Lipika Maji | MSD25011 | Team Member |
 | Biplov Singh | MSD25010 | Team Member |
 
-## �📝 License
+## 📝 License
 
 See LICENSE file for details.
 
