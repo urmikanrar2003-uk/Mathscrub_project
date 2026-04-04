@@ -1,0 +1,8 @@
+# .gitignore
+.env
+*.env
+__pycache__/
+*.pyc
+mathscrub_output/
+.cache/
+Mathscrub
