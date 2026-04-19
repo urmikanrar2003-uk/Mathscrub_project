@@ -1,9 +1,13 @@
 
-  opencv-python==4.8.1.78 
-  numpy==1.26.4 
-  scipy==1.11.4 
-  matplotlib==3.8.2 
-  Pillow==10.2.0
-  datasets
+opencv-python==4.8.1.78
+numpy==1.26.4
+scipy==1.11.4
+matplotlib==3.8.2
+Pillow==10.2.0
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.35.0
+einops>=0.7.0
+datasets
 tqdm
 python-dotenv

@@ -45,12 +45,37 @@ The tokenization process follows exact algorithms from the MathScrub paper with 
 
 **Output**: Semantically coherent groups of components (tokens)
 
-### Phase 2: Multimodal Deletion Classification (In Progress)
+### Phase 2: Multimodal Deletion Classification 🚀 (IN PROGRESS)
 
-- Uses Vision Transformer (ViT) architecture for strikeout detection
-- Three-channel input: grayscale image, component pixel area, and bounding box size
-- Employs precise mathematical formulas for geometry normalization
-- Identifies strikeouts in handwritten expressions for removal
+**Architecture: Vision Transformer (ViT-Base)**
+- Model: google/vit-base-patch16-224 (86.7M parameters)
+- Input: 3-channel multimodal data
+  - Channel 1: Grayscale component image (224×224)
+  - Channel 2: Component area normalized by page area
+  - Channel 3: Component size normalized by diagonal
+- Output: Binary classification (strikeout / no-strikeout)
+- Task: Detect strikeouts in handwritten mathematical components
+
+**Dataset Integration**
+- Real data: 97,223 training components + 1,000 balanced test samples
+- Automated component extraction from full page images using bounding boxes
+- Geometry-aware feature normalization
+- On-the-fly image caching for training efficiency
+
+**Training Pipeline**
+- Optimizer: AdamW with weight decay (1e-5) and linear warmup
+- Learning rate: 1e-4 with cosine annealing scheduling
+- Batch size: 64 (configurable based on GPU)
+- Validation metrics: Accuracy, Precision, Recall
+- Checkpoint saving (best model + periodic)
+
+**Files & Scripts**
+- `vit_strikeout_detector.py` — ViT model architecture & inference API
+- `data_loader_phase2.py` — Dataset loading with component extraction
+- `train_phase2_real_data.py` — Full training pipeline
+- `train_demo.py` — Quick demo training (5K samples, 5 epochs)
+- `inference_strikeout_detector.py` — Inference on new images
+- `PHASE2_GUIDE.py` — Comprehensive guide & commands
 
 ### Phase 3: Geometry-Aware Inpainting (Planned)
 
@@ -93,7 +118,7 @@ HF_token=your_hugging_face_token_here
 
 ## 🚀 Usage
 
-### Data Ingestion & Tokenization
+### Phase 1: Data Ingestion & Tokenization
 
 Run the main pipeline to ingest data and generate tokens:
 
@@ -113,6 +138,38 @@ This will:
 - Apply tokenization to each image
 - Save results to `./tokenization_results/` directory
 
+### Phase 2: Strikeout Detection Training
+
+**Quick Demo (5,000 samples, 5 epochs)**
+```bash
+python train_demo.py --epochs 5 --num-train-samples 5000
+```
+
+**Full Training (97K samples, 30 epochs)**
+```bash
+python train_phase2_real_data.py \
+    --data-dir ./data \
+    --epochs 30 \
+    --batch-size 64 \
+    --learning-rate 1e-4 \
+    --output-dir checkpoints_phase2_full
+```
+
+**Inference on New Components**
+```bash
+# Single image
+python inference_strikeout_detector.py \
+    --checkpoint checkpoints_phase2_full/checkpoint_best.pt \
+    --image path/to/component.jpg
+
+# Batch prediction
+python inference_strikeout_detector.py \
+    --checkpoint checkpoints_phase2_full/checkpoint_best.pt \
+    --image-dir path/to/components/
+```
+
+See [PHASE2_GUIDE.py](PHASE2_GUIDE.py) for detailed documentation.
+
 ### Output Structure
 
 Results are organized by sample:
@@ -130,20 +187,39 @@ tokenization_results/
 ## 📁 Project Structure
 
 ```
-├── data_ingestion.py      # Dataset loading & processing
-├── tokenization.py        # Tokenization pipeline implementation
-├── requirements.txt       # Python dependencies
-├── tokenization_results/  # Output directory
-└── README.md             # This file
+├── Phase 1: Tokenization
+│   ├── data_ingestion.py           # Dataset loading & processing
+│   ├── tokenization.py             # Tokenization pipeline
+│   └── tokenization_results/       # Output directory
+│
+├── Phase 2: Strikeout Detection
+│   ├── vit_strikeout_detector.py   # ViT model architecture & API
+│   ├── data_loader_phase2.py       # Component extraction & dataset
+│   ├── train_phase2_real_data.py   # Full training pipeline
+│   ├── train_demo.py               # Quick demo training
+│   ├── inference_strikeout_detector.py  # Inference on new data
+│   └── PHASE2_GUIDE.py             # Comprehensive guide
+│
+├── requirements.txt                # Python dependencies
+└── README.md                       # This file
 ```
 
 ## 📚 Dependencies
 
-- **opencv-python** — Image processing
+**Core Libraries**
+- **torch** — Deep learning framework
+- **torchvision** — Computer vision utilities
+- **transformers** — Hugging Face pre-trained models
+- **einops** — Tensor operations
+
+**Image Processing**
+- **opencv-python** — Image processing & manipulation
+- **Pillow** — Image I/O and manipulation
 - **numpy** — Numerical computations
 - **scipy** — Scientific algorithms (Delaunay triangulation)
+
+**Utilities**
 - **matplotlib** — Visualization
-- **Pillow** — Image manipulation
 - **datasets** — Hugging Face datasets integration
 - **tqdm** — Progress bars
 - **python-dotenv** — Environment variable management
