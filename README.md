@@ -11,7 +11,7 @@ Single-pipeline strikeout removal and LaTeX generation for handwritten calculus 
 | Phase | Module | Description | Status |
 |-------|--------|-------------|--------|
 | **Phase 1** | Token Construction | Delaunay triangulation and Union-Find grouping for semantic symbol clustering | ✅ **COMPLETE** |
-| **Phase 2** | Multimodal Deletion Classification | Vision Transformer (ViT) for strikeout detection and classification | 🔄 In Progress |
+| **Phase 2** | Multimodal Deletion Classification | Vision Transformer (ViT) for strikeout detection and classification | ✅ **COMPLETE** |
 | **Phase 3** | Geometry-Aware Inpainting | Image restoration using Navier-Stokes interpolation after strikeout removal | 📋 Planned |
 | **Phase 4** | LaTeX Generation | Vision-Language Model (Qwen2.5-VL-32B) transcription with Parameter-Efficient Fine-Tuning | 📋 Planned |
 
@@ -45,12 +45,11 @@ The tokenization process follows exact algorithms from the MathScrub paper with 
 
 **Output**: Semantically coherent groups of components (tokens)
 
-### Phase 2: Multimodal Deletion Classification (In Progress)
+### Phase 2: Multimodal Deletion Classification ✅ (COMPLETE)
 
-- Uses Vision Transformer (ViT) architecture for strikeout detection
-- Three-channel input: grayscale image, component pixel area, and bounding box size
-- Employs precise mathematical formulas for geometry normalization
-- Identifies strikeouts in handwritten expressions for removal
+- Uses an Early-Fusion Vision Transformer (ViT) architecture natively mapping 3 channels (Grayscale Image Crop + Area Geometry Scalar + Maximum Bounding Box Scalar).
+- Computes empirical geometry statistics natively over tokenization arrays padding out crops to perfect structural squares (`224x224`).
+- Instantly predicts deletions traversing `tokens.json` directly within the streaming dataset loop natively.
 
 ### Phase 3: Geometry-Aware Inpainting (Planned)
 
@@ -98,20 +97,15 @@ HF_token=your_hugging_face_token_here
 Run the main pipeline to ingest data and generate tokens:
 
 ```python
-from data_ingestion import ingest_and_tokenize
-
-# Process 5 samples from the MathStrike dataset
-ingest_and_tokenize(
-    dataset_name="Incinciblecolonel/MathStrike",
-    data_dir="original_img",
-    limit=5
-)
+# Execute terminal command
+python data_ingestion.py
 ```
 
-This will:
-- Download samples from the specified Hugging Face dataset
-- Apply tokenization to each image
-- Save results to `./tokenization_results/` directory
+This acts as a complete end-to-end inference pipeline:
+- Streams sample images from `Incinciblecolonel/MathStrike` on Hugging Face natively in RAM/Memory.
+- Applies complex algorithmic tokenization locally generating spatial `tokens.json`.
+- Dynamically bounds, slices, and processes token crops pushing them straight into the **Multimodal ViT** (without bloated I/O disk writes).
+- Saves localized strikeout decisions mathematically directly into `./tokenization_results/` arrays via the `vit_predictions` parameter!
 
 ### Output Structure
 
@@ -130,11 +124,13 @@ tokenization_results/
 ## 📁 Project Structure
 
 ```
-├── data_ingestion.py      # Dataset loading & processing
-├── tokenization.py        # Tokenization pipeline implementation
-├── requirements.txt       # Python dependencies
-├── tokenization_results/  # Output directory
-└── README.md             # This file
+├── data_ingestion.py         # End-to-end dataset streaming & pipeline integration
+├── tokenization.py           # Phase 1: Semantic token construction
+├── vit_strikeout_detector.py # Phase 2: Multimodal Early-Fusion ViT script
+├── stats_for_VIT.ipynb       # Jupyter Notebook tracking empiric Dataset Normalization geometries
+├── requirements.txt          # Python dependencies
+├── tokenization_results/     # Output directory (holding generated tokens.json & ViT logic)
+└── README.md                 # This file
 ```
 
 ## 📚 Dependencies
@@ -183,11 +179,11 @@ See LICENSE file for details.
 ## 🛠️ Development Notes
 
 - **Phase 1 (Token Construction)** has been completed successfully ✅
-- **Phase 2 (Multimodal Deletion Classification)** is currently in development 🔄
+- **Phase 2 (Multimodal Deletion Classification)** has been completed successfully ✅
 - **Phase 3 & 4** are in planning stages 📋
 - Features and APIs may change as the project evolves
 - Contributions and feedback are welcome
 
 
 **Last Updated**: April 2026  
-**Current Phase**: Phase 1 Complete (Token Construction) | Next: Phase 2 (Multimodal Deletion Classification)
+**Current Phase**: Phase 2 Complete (Multimodal Deletion Classification) | Next: Phase 3 (Geometry-Aware Inpainting)

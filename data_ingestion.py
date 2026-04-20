@@ -4,6 +4,11 @@ from datasets import load_dataset
 from tokenization import process_pil_image
 from pathlib import Path
 from tqdm import tqdm
+import cv2
+import numpy as np
+import json
+import torch
+from vit_strikeout_detector import MultimodalDeletionViT, predict_deletion_components
 
 # Load environment variables
 load_dotenv()
@@ -25,6 +30,11 @@ def ingest_and_tokenize(dataset_name="Incinciblecolonel/MathStrike", data_dir="o
             streaming=True, 
             token=hf_token
         )
+        
+        print("Initializing Vision Transformer...")
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        model = MultimodalDeletionViT(pretrained=False)
+        model.to(device)
         
         output_dir = Path("./tokenization_results")
         output_dir.mkdir(exist_ok=True)
@@ -49,7 +59,8 @@ def ingest_and_tokenize(dataset_name="Incinciblecolonel/MathStrike", data_dir="o
                 print(f"Warning: No image found in sample {i}")
                 continue
                 
-            process_pil_image(
+            # 1. Run Tokenization Pipeline
+            meta_data = process_pil_image(
                 pil_image=image,
                 sample_id=i,
                 output_dir=output_dir,
@@ -57,6 +68,25 @@ def ingest_and_tokenize(dataset_name="Incinciblecolonel/MathStrike", data_dir="o
                 save_crops=True,
                 verbose=False
             )
+            
+            # 2. Extract components & Convert to Grayscale
+            components = meta_data.get("components", [])
+            gray_image = cv2.cvtColor(np.array(image.convert("RGB")), cv2.COLOR_RGB2GRAY)
+            
+            # 3. Predict Deletions via ViT
+            predictions = predict_deletion_components(
+                components=components, 
+                gray_image=gray_image, 
+                model=model, 
+                device=device
+            )
+            
+            # 4. Save predictions alongside tokenization metadata
+            meta_data["vit_predictions"] = predictions
+            
+            sample_dir = output_dir / f"sample_{i:06d}"
+            with open(sample_dir / "tokens.json", "w") as f:
+                json.dump(meta_data, f, indent=2)
             
         print(f"\nProcessing complete! Results saved to: {output_dir.absolute()}")
         
