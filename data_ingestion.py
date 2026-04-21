@@ -89,4 +89,4 @@ def ingest_and_tokenize(
 
 
 if __name__ == "__main__":
-    ingest_and_tokenize(limit=10)
+    ingest_and_tokenize(limit=5)

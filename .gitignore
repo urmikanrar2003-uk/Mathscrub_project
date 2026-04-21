@@ -6,3 +6,4 @@ __pycache__/
 mathscrub_output/
 .cache/
 Mathscrub
+best_model.pth
