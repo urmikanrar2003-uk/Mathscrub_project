@@ -58,7 +58,7 @@ The tokenization process follows exact algorithms from the MathScrub paper with 
 - Precise size thresholds to separate small gaps and larger regions
 - Restores image quality after strikeout removal
 
-### Phase 4: LaTeX Generation (Planned)
+### Phase 4:  LaTeX Generation (Planned)
 
 - Vision-Language Model: Qwen2.5-VL-32B for expression transcription
 - Parameter-Efficient Fine-Tuning (PEFT) strategy with adaptive LoRA
