@@ -12,8 +12,8 @@ Single-pipeline strikeout removal and LaTeX generation for handwritten calculus 
 |-------|--------|-------------|--------|
 | **Phase 1** | Token Construction | Delaunay triangulation and Union-Find grouping for semantic symbol clustering | ✅ **COMPLETE** |
 | **Phase 2** | Multimodal Deletion Classification | Vision Transformer (ViT) for strikeout detection and classification | ✅ **COMPLETE** |
-| **Phase 3** | Geometry-Aware Inpainting | Image restoration using Navier-Stokes interpolation after strikeout removal | 📋 Planned |
-| **Phase 4** | LaTeX Generation | Vision-Language Model (Qwen2.5-VL-32B) transcription with Parameter-Efficient Fine-Tuning | 📋 Planned |
+| **Phase 3** | Geometry-Aware Inpainting | Image restoration using Navier-Stokes interpolation after strikeout removal | ✅ **COMPLETE** |
+| **Phase 4** | LaTeX Generation | Vision-Language Model (Qwen2.5-VL-7B/32B) transcription with PEFT | 📋 Planned |
 
 ## 📖 Overview
 
@@ -26,8 +26,8 @@ This project is designed to extract and tokenize mathematical symbols and struct
 - **Data Ingestion**: Automatically loads image datasets from Hugging Face
 - **Image Tokenization**: Converts mathematical images into semantic tokens using Delaunay triangulation and Union-Find clustering *(Phase 1 Complete)*
 - **Structured Output**: Generates tokens and cropped regions for further analysis
-- **[In Development] Strikeout Detection**: Uses Vision Transformers for deletion classification
-- **[In Development] Image Restoration**: Geometry-aware inpainting after strikeout removal
+- **Strikeout Detection**: Uses Vision Transformers for deletion classification *(Phase 2 Complete)*
+- **Image Restoration**: Geometry-aware inpainting using Navier-Stokes and boundary feathering *(Phase 3 Complete)*
 - **[In Development] LaTeX Transcription**: Vision-Language Model transcription with PEFT
 
 ## 🔧 MathScrub Framework (4 Modules)
@@ -51,16 +51,16 @@ The tokenization process follows exact algorithms from the MathScrub paper with 
 - Computes empirical geometry statistics natively over tokenization arrays padding out crops to perfect structural squares (`224x224`).
 - Instantly predicts deletions traversing `tokens.json` directly within the streaming dataset loop natively.
 
-### Phase 3: Geometry-Aware Inpainting (Planned)
+### Phase 3: Geometry-Aware Inpainting ✅ (COMPLETE)
 
-- Applies Navier-Stokes interpolation for boundary-aware restoration
-- Uses feathering techniques for seamless inpainting of strikeout regions
-- Precise size thresholds to separate small gaps and larger regions
-- Restores image quality after strikeout removal
+- **Navier-Stokes Interpolation** — Applied for boundary-aware restoration of small symbol gaps.
+- **Boundary-Aware Feathering** — Implements MathScrub Eq. 10 for seamless repasting of larger strikeout regions.
+- **Area Thresholding** — Uses precise size thresholds ($T=15316$) to separate symbol gaps from massive occlusions.
+- **Unified Pipeline** — Full-dataset restoration script (`restore_dataset.py`) processes images end-to-end and saves cleaned images directly to the D: drive.
 
 ### Phase 4: LaTeX Generation (Planned)
 
-- Vision-Language Model: Qwen2.5-VL-32B for expression transcription
+- **Vision-Language Model**: Qwen2.5-VL (7B or 32B version) for expression transcription.
 - Parameter-Efficient Fine-Tuning (PEFT) strategy with adaptive LoRA
 - Adaptive LoRA on vision stack, fixed-rank LoRA on text decoder
 - Generates accurate LaTeX code for mathematical expressions
@@ -92,44 +92,47 @@ HF_token=your_hugging_face_token_here
 
 ## 🚀 Usage
 
-### Data Ingestion & Tokenization
+### Full Dataset Restoration (Phases 1-3)
 
-Run the main pipeline to ingest data and generate tokens:
+To process the entire MathStrike dataset and save cleaned images for fine-tuning, run the unified pipeline:
 
-```python
-# Execute terminal command
-python data_ingestion.py
+```powershell
+# Optimized for D: drive and GPU acceleration
+python restore_dataset.py --output_dir "D:/MathScrub_Restored"
 ```
 
-This acts as a complete end-to-end inference pipeline:
-- Streams sample images from `Incinciblecolonel/MathStrike` on Hugging Face natively in RAM/Memory.
-- Applies complex algorithmic tokenization locally generating spatial `tokens.json`.
-- Dynamically bounds, slices, and processes token crops pushing them straight into the **Multimodal ViT** (without bloated I/O disk writes).
-- Saves localized strikeout decisions mathematically directly into `./tokenization_results/` arrays via the `vit_predictions` parameter!
+**Pipeline Workflow**:
+1. **Streaming** — Images are streamed from Hugging Face in memory.
+2. **In-Memory Processing** — Tokenization and ViT classification are done without writing temporary crops to disk.
+3. **Automatic Cleanup** — Intermediate data is discarded after each sample to save space.
+4. **Resumption Support** — If stopped, the script automatically picks up from the last processed sample.
 
 ### Output Structure
 
-Results are organized by sample:
+Restored images are saved to your specified output directory (e.g., D: drive):
 ```
-tokenization_results/
+D:/MathScrub_Restored/
+├── progress.txt             # Tracks completed sample IDs
+├── failed_samples.txt       # Logs IDs of corrupted/failed images
 ├── sample_000000/
-│   ├── tokens.json (token data)
-│   └── crops/      (cropped regions)
+│   ├── restored_img_final.png  # Cleaned math image (ready for VLM)
+│   └── meta.json               # Slim metadata (ID, shape)
 ├── sample_000001/
-│   ├── tokens.json
-│   └── crops/
+│   ├── restored_img_final.png
+│   └── meta.json
 ...
 ```
 
 ## 📁 Project Structure
 
 ```
-├── data_ingestion.py         # End-to-end dataset streaming & pipeline integration
+├── restore_dataset.py        # Unified Phase 1-3 full-dataset pipeline
+├── geometry_inpainting.py     # Phase 3: Restoration logic & main
 ├── tokenization.py           # Phase 1: Semantic token construction
 ├── vit_strikeout_detector.py # Phase 2: Multimodal Early-Fusion ViT script
-├── stats_for_VIT.ipynb       # Jupyter Notebook tracking empiric Dataset Normalization geometries
+├── data_ingestion.py         # Original ingestion script for Phase 1 testing
+├── train_vit.py              # ViT training script
 ├── requirements.txt          # Python dependencies
-├── tokenization_results/     # Output directory (holding generated tokens.json & ViT logic)
 └── README.md                 # This file
 ```
 
@@ -180,10 +183,9 @@ See LICENSE file for details.
 
 - **Phase 1 (Token Construction)** has been completed successfully ✅
 - **Phase 2 (Multimodal Deletion Classification)** has been completed successfully ✅
-- **Phase 3 & 4** are in planning stages 📋
-- Features and APIs may change as the project evolves
-- Contributions and feedback are welcome
+- **Phase 3 (Geometry-Aware Inpainting)** has been completed successfully ✅
+- **Phase 4 (LaTeX Generation)** is in the planning stage (Next Step) 📋
+- The pipeline is now ready for full-scale data cleaning on the MathStrike dataset.
 
-
-**Last Updated**: April 2026  
-**Current Phase**: Phase 2 Complete (Multimodal Deletion Classification) | Next: Phase 3 (Geometry-Aware Inpainting)
+**Last Updated**: May 2026  
+**Current Phase**: Phase 3 Complete (Restoration) | Next: Phase 4 (LaTeX Transcription)
