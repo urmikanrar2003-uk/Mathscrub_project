@@ -1,0 +1,1804 @@
+{
+  "sample": "sample_000002",
+  "total_tokens": 179,
+  "classified": 179,
+  "skipped": 0,
+  "tokens": [
+    {
+      "token_idx": 0,
+      "component_ids": [
+        0
+      ],
+      "primary_id": 0,
+      "p_delete": 0.0207,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0000.png"
+    },
+    {
+      "token_idx": 1,
+      "component_ids": [
+        1
+      ],
+      "primary_id": 1,
+      "p_delete": 0.2738,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0001.png"
+    },
+    {
+      "token_idx": 2,
+      "component_ids": [
+        2
+      ],
+      "primary_id": 2,
+      "p_delete": 0.007,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0002.png"
+    },
+    {
+      "token_idx": 3,
+      "component_ids": [
+        3
+      ],
+      "primary_id": 3,
+      "p_delete": 0.2555,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0003.png"
+    },
+    {
+      "token_idx": 4,
+      "component_ids": [
+        4
+      ],
+      "primary_id": 4,
+      "p_delete": 0.0025,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0004.png"
+    },
+    {
+      "token_idx": 5,
+      "component_ids": [
+        5
+      ],
+      "primary_id": 5,
+      "p_delete": 0.2305,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0005.png"
+    },
+    {
+      "token_idx": 6,
+      "component_ids": [
+        6,
+        8
+      ],
+      "primary_id": 6,
+      "p_delete": 0.0314,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0006.png"
+    },
+    {
+      "token_idx": 7,
+      "component_ids": [
+        7
+      ],
+      "primary_id": 7,
+      "p_delete": 0.0084,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0007.png"
+    },
+    {
+      "token_idx": 8,
+      "component_ids": [
+        9
+      ],
+      "primary_id": 9,
+      "p_delete": 0.0094,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0008.png"
+    },
+    {
+      "token_idx": 9,
+      "component_ids": [
+        10
+      ],
+      "primary_id": 10,
+      "p_delete": 0.0051,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0009.png"
+    },
+    {
+      "token_idx": 10,
+      "component_ids": [
+        11
+      ],
+      "primary_id": 11,
+      "p_delete": 0.1433,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0010.png"
+    },
+    {
+      "token_idx": 11,
+      "component_ids": [
+        12
+      ],
+      "primary_id": 12,
+      "p_delete": 0.2605,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0011.png"
+    },
+    {
+      "token_idx": 12,
+      "component_ids": [
+        13
+      ],
+      "primary_id": 13,
+      "p_delete": 0.0051,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0012.png"
+    },
+    {
+      "token_idx": 13,
+      "component_ids": [
+        14
+      ],
+      "primary_id": 14,
+      "p_delete": 0.224,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0013.png"
+    },
+    {
+      "token_idx": 14,
+      "component_ids": [
+        15
+      ],
+      "primary_id": 15,
+      "p_delete": 0.0082,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0014.png"
+    },
+    {
+      "token_idx": 15,
+      "component_ids": [
+        16
+      ],
+      "primary_id": 16,
+      "p_delete": 0.0119,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0015.png"
+    },
+    {
+      "token_idx": 16,
+      "component_ids": [
+        17
+      ],
+      "primary_id": 17,
+      "p_delete": 0.029,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0016.png"
+    },
+    {
+      "token_idx": 17,
+      "component_ids": [
+        18
+      ],
+      "primary_id": 18,
+      "p_delete": 0.0283,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0017.png"
+    },
+    {
+      "token_idx": 18,
+      "component_ids": [
+        19
+      ],
+      "primary_id": 19,
+      "p_delete": 0.0156,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0018.png"
+    },
+    {
+      "token_idx": 19,
+      "component_ids": [
+        20
+      ],
+      "primary_id": 20,
+      "p_delete": 0.0182,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0019.png"
+    },
+    {
+      "token_idx": 20,
+      "component_ids": [
+        21
+      ],
+      "primary_id": 21,
+      "p_delete": 0.8536,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0020.png"
+    },
+    {
+      "token_idx": 21,
+      "component_ids": [
+        22
+      ],
+      "primary_id": 22,
+      "p_delete": 0.8066,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0021.png"
+    },
+    {
+      "token_idx": 22,
+      "component_ids": [
+        23
+      ],
+      "primary_id": 23,
+      "p_delete": 0.3478,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0022.png"
+    },
+    {
+      "token_idx": 23,
+      "component_ids": [
+        24
+      ],
+      "primary_id": 24,
+      "p_delete": 0.0373,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0023.png"
+    },
+    {
+      "token_idx": 24,
+      "component_ids": [
+        25
+      ],
+      "primary_id": 25,
+      "p_delete": 0.2505,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0024.png"
+    },
+    {
+      "token_idx": 25,
+      "component_ids": [
+        26
+      ],
+      "primary_id": 26,
+      "p_delete": 0.3031,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0025.png"
+    },
+    {
+      "token_idx": 26,
+      "component_ids": [
+        27
+      ],
+      "primary_id": 27,
+      "p_delete": 0.3483,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0026.png"
+    },
+    {
+      "token_idx": 27,
+      "component_ids": [
+        28
+      ],
+      "primary_id": 28,
+      "p_delete": 0.2959,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0027.png"
+    },
+    {
+      "token_idx": 28,
+      "component_ids": [
+        29
+      ],
+      "primary_id": 29,
+      "p_delete": 0.0318,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0028.png"
+    },
+    {
+      "token_idx": 29,
+      "component_ids": [
+        30
+      ],
+      "primary_id": 30,
+      "p_delete": 0.0261,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0029.png"
+    },
+    {
+      "token_idx": 30,
+      "component_ids": [
+        32
+      ],
+      "primary_id": 32,
+      "p_delete": 0.7462,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0030.png"
+    },
+    {
+      "token_idx": 31,
+      "component_ids": [
+        33
+      ],
+      "primary_id": 33,
+      "p_delete": 0.2628,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0031.png"
+    },
+    {
+      "token_idx": 32,
+      "component_ids": [
+        34
+      ],
+      "primary_id": 34,
+      "p_delete": 0.2384,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0032.png"
+    },
+    {
+      "token_idx": 33,
+      "component_ids": [
+        35
+      ],
+      "primary_id": 35,
+      "p_delete": 0.0228,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0033.png"
+    },
+    {
+      "token_idx": 34,
+      "component_ids": [
+        36
+      ],
+      "primary_id": 36,
+      "p_delete": 0.0177,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0034.png"
+    },
+    {
+      "token_idx": 35,
+      "component_ids": [
+        37
+      ],
+      "primary_id": 37,
+      "p_delete": 0.2394,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0035.png"
+    },
+    {
+      "token_idx": 36,
+      "component_ids": [
+        38
+      ],
+      "primary_id": 38,
+      "p_delete": 0.2591,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0036.png"
+    },
+    {
+      "token_idx": 37,
+      "component_ids": [
+        39
+      ],
+      "primary_id": 39,
+      "p_delete": 0.2791,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0037.png"
+    },
+    {
+      "token_idx": 38,
+      "component_ids": [
+        40
+      ],
+      "primary_id": 40,
+      "p_delete": 0.0169,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0038.png"
+    },
+    {
+      "token_idx": 39,
+      "component_ids": [
+        41
+      ],
+      "primary_id": 41,
+      "p_delete": 0.2307,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0039.png"
+    },
+    {
+      "token_idx": 40,
+      "component_ids": [
+        42
+      ],
+      "primary_id": 42,
+      "p_delete": 0.253,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0040.png"
+    },
+    {
+      "token_idx": 41,
+      "component_ids": [
+        43
+      ],
+      "primary_id": 43,
+      "p_delete": 0.03,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0041.png"
+    },
+    {
+      "token_idx": 42,
+      "component_ids": [
+        44
+      ],
+      "primary_id": 44,
+      "p_delete": 0.0118,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0042.png"
+    },
+    {
+      "token_idx": 43,
+      "component_ids": [
+        45
+      ],
+      "primary_id": 45,
+      "p_delete": 0.2651,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0043.png"
+    },
+    {
+      "token_idx": 44,
+      "component_ids": [
+        48
+      ],
+      "primary_id": 48,
+      "p_delete": 0.005,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0044.png"
+    },
+    {
+      "token_idx": 45,
+      "component_ids": [
+        49
+      ],
+      "primary_id": 49,
+      "p_delete": 0.2724,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0045.png"
+    },
+    {
+      "token_idx": 46,
+      "component_ids": [
+        50
+      ],
+      "primary_id": 50,
+      "p_delete": 0.0026,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0046.png"
+    },
+    {
+      "token_idx": 47,
+      "component_ids": [
+        51
+      ],
+      "primary_id": 51,
+      "p_delete": 0.0024,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0047.png"
+    },
+    {
+      "token_idx": 48,
+      "component_ids": [
+        52
+      ],
+      "primary_id": 52,
+      "p_delete": 0.0346,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0048.png"
+    },
+    {
+      "token_idx": 49,
+      "component_ids": [
+        53
+      ],
+      "primary_id": 53,
+      "p_delete": 0.0139,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0049.png"
+    },
+    {
+      "token_idx": 50,
+      "component_ids": [
+        54
+      ],
+      "primary_id": 54,
+      "p_delete": 0.0708,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0050.png"
+    },
+    {
+      "token_idx": 51,
+      "component_ids": [
+        55
+      ],
+      "primary_id": 55,
+      "p_delete": 0.2387,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0051.png"
+    },
+    {
+      "token_idx": 52,
+      "component_ids": [
+        56
+      ],
+      "primary_id": 56,
+      "p_delete": 0.025,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0052.png"
+    },
+    {
+      "token_idx": 53,
+      "component_ids": [
+        57
+      ],
+      "primary_id": 57,
+      "p_delete": 0.0135,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0053.png"
+    },
+    {
+      "token_idx": 54,
+      "component_ids": [
+        58
+      ],
+      "primary_id": 58,
+      "p_delete": 0.9127,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0054.png"
+    },
+    {
+      "token_idx": 55,
+      "component_ids": [
+        60
+      ],
+      "primary_id": 60,
+      "p_delete": 0.9982,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0055.png"
+    },
+    {
+      "token_idx": 56,
+      "component_ids": [
+        61
+      ],
+      "primary_id": 61,
+      "p_delete": 0.0978,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0056.png"
+    },
+    {
+      "token_idx": 57,
+      "component_ids": [
+        62,
+        66
+      ],
+      "primary_id": 62,
+      "p_delete": 0.0604,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0057.png"
+    },
+    {
+      "token_idx": 58,
+      "component_ids": [
+        63
+      ],
+      "primary_id": 63,
+      "p_delete": 0.5512,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0058.png"
+    },
+    {
+      "token_idx": 59,
+      "component_ids": [
+        67
+      ],
+      "primary_id": 67,
+      "p_delete": 0.0149,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0059.png"
+    },
+    {
+      "token_idx": 60,
+      "component_ids": [
+        70
+      ],
+      "primary_id": 70,
+      "p_delete": 0.0261,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0060.png"
+    },
+    {
+      "token_idx": 61,
+      "component_ids": [
+        71
+      ],
+      "primary_id": 71,
+      "p_delete": 0.0039,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0061.png"
+    },
+    {
+      "token_idx": 62,
+      "component_ids": [
+        72
+      ],
+      "primary_id": 72,
+      "p_delete": 0.2868,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0062.png"
+    },
+    {
+      "token_idx": 63,
+      "component_ids": [
+        73
+      ],
+      "primary_id": 73,
+      "p_delete": 0.0031,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0063.png"
+    },
+    {
+      "token_idx": 64,
+      "component_ids": [
+        76
+      ],
+      "primary_id": 76,
+      "p_delete": 0.2018,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0064.png"
+    },
+    {
+      "token_idx": 65,
+      "component_ids": [
+        80
+      ],
+      "primary_id": 80,
+      "p_delete": 0.0116,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0065.png"
+    },
+    {
+      "token_idx": 66,
+      "component_ids": [
+        84
+      ],
+      "primary_id": 84,
+      "p_delete": 0.0124,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0066.png"
+    },
+    {
+      "token_idx": 67,
+      "component_ids": [
+        97
+      ],
+      "primary_id": 97,
+      "p_delete": 0.2565,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0067.png"
+    },
+    {
+      "token_idx": 68,
+      "component_ids": [
+        99
+      ],
+      "primary_id": 99,
+      "p_delete": 0.2643,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0068.png"
+    },
+    {
+      "token_idx": 69,
+      "component_ids": [
+        102
+      ],
+      "primary_id": 102,
+      "p_delete": 0.2547,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0069.png"
+    },
+    {
+      "token_idx": 70,
+      "component_ids": [
+        107
+      ],
+      "primary_id": 107,
+      "p_delete": 0.0205,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0070.png"
+    },
+    {
+      "token_idx": 71,
+      "component_ids": [
+        108
+      ],
+      "primary_id": 108,
+      "p_delete": 0.0057,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0071.png"
+    },
+    {
+      "token_idx": 72,
+      "component_ids": [
+        111
+      ],
+      "primary_id": 111,
+      "p_delete": 0.0342,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0072.png"
+    },
+    {
+      "token_idx": 73,
+      "component_ids": [
+        112
+      ],
+      "primary_id": 112,
+      "p_delete": 0.0189,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0073.png"
+    },
+    {
+      "token_idx": 74,
+      "component_ids": [
+        114
+      ],
+      "primary_id": 114,
+      "p_delete": 0.2238,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0074.png"
+    },
+    {
+      "token_idx": 75,
+      "component_ids": [
+        115
+      ],
+      "primary_id": 115,
+      "p_delete": 0.2965,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0075.png"
+    },
+    {
+      "token_idx": 76,
+      "component_ids": [
+        116
+      ],
+      "primary_id": 116,
+      "p_delete": 0.2594,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0076.png"
+    },
+    {
+      "token_idx": 77,
+      "component_ids": [
+        117
+      ],
+      "primary_id": 117,
+      "p_delete": 0.3198,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0077.png"
+    },
+    {
+      "token_idx": 78,
+      "component_ids": [
+        118
+      ],
+      "primary_id": 118,
+      "p_delete": 0.3464,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0078.png"
+    },
+    {
+      "token_idx": 79,
+      "component_ids": [
+        119
+      ],
+      "primary_id": 119,
+      "p_delete": 0.3027,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0079.png"
+    },
+    {
+      "token_idx": 80,
+      "component_ids": [
+        120
+      ],
+      "primary_id": 120,
+      "p_delete": 0.2439,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0080.png"
+    },
+    {
+      "token_idx": 81,
+      "component_ids": [
+        121
+      ],
+      "primary_id": 121,
+      "p_delete": 0.241,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0081.png"
+    },
+    {
+      "token_idx": 82,
+      "component_ids": [
+        122
+      ],
+      "primary_id": 122,
+      "p_delete": 0.0319,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0082.png"
+    },
+    {
+      "token_idx": 83,
+      "component_ids": [
+        123
+      ],
+      "primary_id": 123,
+      "p_delete": 0.1247,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0083.png"
+    },
+    {
+      "token_idx": 84,
+      "component_ids": [
+        124
+      ],
+      "primary_id": 124,
+      "p_delete": 0.2191,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0084.png"
+    },
+    {
+      "token_idx": 85,
+      "component_ids": [
+        125
+      ],
+      "primary_id": 125,
+      "p_delete": 0.0057,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0085.png"
+    },
+    {
+      "token_idx": 86,
+      "component_ids": [
+        127
+      ],
+      "primary_id": 127,
+      "p_delete": 0.2528,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0086.png"
+    },
+    {
+      "token_idx": 87,
+      "component_ids": [
+        128
+      ],
+      "primary_id": 128,
+      "p_delete": 0.2554,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0087.png"
+    },
+    {
+      "token_idx": 88,
+      "component_ids": [
+        129
+      ],
+      "primary_id": 129,
+      "p_delete": 0.2655,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0088.png"
+    },
+    {
+      "token_idx": 89,
+      "component_ids": [
+        130
+      ],
+      "primary_id": 130,
+      "p_delete": 0.239,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0089.png"
+    },
+    {
+      "token_idx": 90,
+      "component_ids": [
+        131
+      ],
+      "primary_id": 131,
+      "p_delete": 0.2618,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0090.png"
+    },
+    {
+      "token_idx": 91,
+      "component_ids": [
+        132
+      ],
+      "primary_id": 132,
+      "p_delete": 0.2856,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0091.png"
+    },
+    {
+      "token_idx": 92,
+      "component_ids": [
+        133
+      ],
+      "primary_id": 133,
+      "p_delete": 0.2214,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0092.png"
+    },
+    {
+      "token_idx": 93,
+      "component_ids": [
+        134
+      ],
+      "primary_id": 134,
+      "p_delete": 0.2382,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0093.png"
+    },
+    {
+      "token_idx": 94,
+      "component_ids": [
+        135
+      ],
+      "primary_id": 135,
+      "p_delete": 0.2724,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0094.png"
+    },
+    {
+      "token_idx": 95,
+      "component_ids": [
+        136
+      ],
+      "primary_id": 136,
+      "p_delete": 0.0043,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0095.png"
+    },
+    {
+      "token_idx": 96,
+      "component_ids": [
+        137
+      ],
+      "primary_id": 137,
+      "p_delete": 0.1994,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0096.png"
+    },
+    {
+      "token_idx": 97,
+      "component_ids": [
+        138
+      ],
+      "primary_id": 138,
+      "p_delete": 0.0102,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0097.png"
+    },
+    {
+      "token_idx": 98,
+      "component_ids": [
+        139
+      ],
+      "primary_id": 139,
+      "p_delete": 0.1101,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0098.png"
+    },
+    {
+      "token_idx": 99,
+      "component_ids": [
+        140
+      ],
+      "primary_id": 140,
+      "p_delete": 0.0264,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0099.png"
+    },
+    {
+      "token_idx": 100,
+      "component_ids": [
+        141
+      ],
+      "primary_id": 141,
+      "p_delete": 0.1527,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0100.png"
+    },
+    {
+      "token_idx": 101,
+      "component_ids": [
+        142
+      ],
+      "primary_id": 142,
+      "p_delete": 0.0311,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0101.png"
+    },
+    {
+      "token_idx": 102,
+      "component_ids": [
+        143
+      ],
+      "primary_id": 143,
+      "p_delete": 0.0034,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0102.png"
+    },
+    {
+      "token_idx": 103,
+      "component_ids": [
+        144
+      ],
+      "primary_id": 144,
+      "p_delete": 0.0236,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0103.png"
+    },
+    {
+      "token_idx": 104,
+      "component_ids": [
+        145
+      ],
+      "primary_id": 145,
+      "p_delete": 0.0111,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0104.png"
+    },
+    {
+      "token_idx": 105,
+      "component_ids": [
+        146
+      ],
+      "primary_id": 146,
+      "p_delete": 0.0174,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0105.png"
+    },
+    {
+      "token_idx": 106,
+      "component_ids": [
+        147
+      ],
+      "primary_id": 147,
+      "p_delete": 0.0245,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0106.png"
+    },
+    {
+      "token_idx": 107,
+      "component_ids": [
+        148
+      ],
+      "primary_id": 148,
+      "p_delete": 0.0595,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0107.png"
+    },
+    {
+      "token_idx": 108,
+      "component_ids": [
+        149,
+        158
+      ],
+      "primary_id": 149,
+      "p_delete": 0.3871,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0108.png"
+    },
+    {
+      "token_idx": 109,
+      "component_ids": [
+        150
+      ],
+      "primary_id": 150,
+      "p_delete": 0.3117,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0109.png"
+    },
+    {
+      "token_idx": 110,
+      "component_ids": [
+        151,
+        156
+      ],
+      "primary_id": 151,
+      "p_delete": 0.0095,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0110.png"
+    },
+    {
+      "token_idx": 111,
+      "component_ids": [
+        152
+      ],
+      "primary_id": 152,
+      "p_delete": 0.1919,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0111.png"
+    },
+    {
+      "token_idx": 112,
+      "component_ids": [
+        153
+      ],
+      "primary_id": 153,
+      "p_delete": 0.2489,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0112.png"
+    },
+    {
+      "token_idx": 113,
+      "component_ids": [
+        154
+      ],
+      "primary_id": 154,
+      "p_delete": 0.0058,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0113.png"
+    },
+    {
+      "token_idx": 114,
+      "component_ids": [
+        155
+      ],
+      "primary_id": 155,
+      "p_delete": 0.1749,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0114.png"
+    },
+    {
+      "token_idx": 115,
+      "component_ids": [
+        157
+      ],
+      "primary_id": 157,
+      "p_delete": 0.004,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0115.png"
+    },
+    {
+      "token_idx": 116,
+      "component_ids": [
+        159
+      ],
+      "primary_id": 159,
+      "p_delete": 0.2014,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0116.png"
+    },
+    {
+      "token_idx": 117,
+      "component_ids": [
+        160
+      ],
+      "primary_id": 160,
+      "p_delete": 0.1359,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0117.png"
+    },
+    {
+      "token_idx": 118,
+      "component_ids": [
+        161
+      ],
+      "primary_id": 161,
+      "p_delete": 0.2559,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0118.png"
+    },
+    {
+      "token_idx": 119,
+      "component_ids": [
+        162
+      ],
+      "primary_id": 162,
+      "p_delete": 0.275,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0119.png"
+    },
+    {
+      "token_idx": 120,
+      "component_ids": [
+        163
+      ],
+      "primary_id": 163,
+      "p_delete": 0.1915,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0120.png"
+    },
+    {
+      "token_idx": 121,
+      "component_ids": [
+        164
+      ],
+      "primary_id": 164,
+      "p_delete": 0.0035,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0121.png"
+    },
+    {
+      "token_idx": 122,
+      "component_ids": [
+        165
+      ],
+      "primary_id": 165,
+      "p_delete": 0.011,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0122.png"
+    },
+    {
+      "token_idx": 123,
+      "component_ids": [
+        166
+      ],
+      "primary_id": 166,
+      "p_delete": 0.0293,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0123.png"
+    },
+    {
+      "token_idx": 124,
+      "component_ids": [
+        167
+      ],
+      "primary_id": 167,
+      "p_delete": 0.0123,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0124.png"
+    },
+    {
+      "token_idx": 125,
+      "component_ids": [
+        168
+      ],
+      "primary_id": 168,
+      "p_delete": 0.0278,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0125.png"
+    },
+    {
+      "token_idx": 126,
+      "component_ids": [
+        169
+      ],
+      "primary_id": 169,
+      "p_delete": 0.0111,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0126.png"
+    },
+    {
+      "token_idx": 127,
+      "component_ids": [
+        170
+      ],
+      "primary_id": 170,
+      "p_delete": 0.0078,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0127.png"
+    },
+    {
+      "token_idx": 128,
+      "component_ids": [
+        171
+      ],
+      "primary_id": 171,
+      "p_delete": 0.2841,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0128.png"
+    },
+    {
+      "token_idx": 129,
+      "component_ids": [
+        172
+      ],
+      "primary_id": 172,
+      "p_delete": 0.0064,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0129.png"
+    },
+    {
+      "token_idx": 130,
+      "component_ids": [
+        173
+      ],
+      "primary_id": 173,
+      "p_delete": 0.2311,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0130.png"
+    },
+    {
+      "token_idx": 131,
+      "component_ids": [
+        174,
+        180
+      ],
+      "primary_id": 174,
+      "p_delete": 0.0688,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0131.png"
+    },
+    {
+      "token_idx": 132,
+      "component_ids": [
+        175
+      ],
+      "primary_id": 175,
+      "p_delete": 0.2691,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0132.png"
+    },
+    {
+      "token_idx": 133,
+      "component_ids": [
+        176
+      ],
+      "primary_id": 176,
+      "p_delete": 0.2872,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0133.png"
+    },
+    {
+      "token_idx": 134,
+      "component_ids": [
+        177,
+        188
+      ],
+      "primary_id": 177,
+      "p_delete": 0.3527,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0134.png"
+    },
+    {
+      "token_idx": 135,
+      "component_ids": [
+        178
+      ],
+      "primary_id": 178,
+      "p_delete": 0.2264,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0135.png"
+    },
+    {
+      "token_idx": 136,
+      "component_ids": [
+        179
+      ],
+      "primary_id": 179,
+      "p_delete": 0.3659,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0136.png"
+    },
+    {
+      "token_idx": 137,
+      "component_ids": [
+        181
+      ],
+      "primary_id": 181,
+      "p_delete": 0.0168,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0137.png"
+    },
+    {
+      "token_idx": 138,
+      "component_ids": [
+        182
+      ],
+      "primary_id": 182,
+      "p_delete": 0.0088,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0138.png"
+    },
+    {
+      "token_idx": 139,
+      "component_ids": [
+        183
+      ],
+      "primary_id": 183,
+      "p_delete": 0.017,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0139.png"
+    },
+    {
+      "token_idx": 140,
+      "component_ids": [
+        184
+      ],
+      "primary_id": 184,
+      "p_delete": 0.2755,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0140.png"
+    },
+    {
+      "token_idx": 141,
+      "component_ids": [
+        185
+      ],
+      "primary_id": 185,
+      "p_delete": 0.0117,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0141.png"
+    },
+    {
+      "token_idx": 142,
+      "component_ids": [
+        186
+      ],
+      "primary_id": 186,
+      "p_delete": 0.2297,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0142.png"
+    },
+    {
+      "token_idx": 143,
+      "component_ids": [
+        187
+      ],
+      "primary_id": 187,
+      "p_delete": 0.2274,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0143.png"
+    },
+    {
+      "token_idx": 144,
+      "component_ids": [
+        189
+      ],
+      "primary_id": 189,
+      "p_delete": 0.2192,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0144.png"
+    },
+    {
+      "token_idx": 145,
+      "component_ids": [
+        190
+      ],
+      "primary_id": 190,
+      "p_delete": 0.2664,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0145.png"
+    },
+    {
+      "token_idx": 146,
+      "component_ids": [
+        191
+      ],
+      "primary_id": 191,
+      "p_delete": 0.2213,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0146.png"
+    },
+    {
+      "token_idx": 147,
+      "component_ids": [
+        192
+      ],
+      "primary_id": 192,
+      "p_delete": 0.0026,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0147.png"
+    },
+    {
+      "token_idx": 148,
+      "component_ids": [
+        193
+      ],
+      "primary_id": 193,
+      "p_delete": 0.2786,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0148.png"
+    },
+    {
+      "token_idx": 149,
+      "component_ids": [
+        194
+      ],
+      "primary_id": 194,
+      "p_delete": 0.2224,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0149.png"
+    },
+    {
+      "token_idx": 150,
+      "component_ids": [
+        195
+      ],
+      "primary_id": 195,
+      "p_delete": 0.0231,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0150.png"
+    },
+    {
+      "token_idx": 151,
+      "component_ids": [
+        196
+      ],
+      "primary_id": 196,
+      "p_delete": 0.2153,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0151.png"
+    },
+    {
+      "token_idx": 152,
+      "component_ids": [
+        197
+      ],
+      "primary_id": 197,
+      "p_delete": 0.1071,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0152.png"
+    },
+    {
+      "token_idx": 153,
+      "component_ids": [
+        198
+      ],
+      "primary_id": 198,
+      "p_delete": 0.0027,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0153.png"
+    },
+    {
+      "token_idx": 154,
+      "component_ids": [
+        199
+      ],
+      "primary_id": 199,
+      "p_delete": 0.0365,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0154.png"
+    },
+    {
+      "token_idx": 155,
+      "component_ids": [
+        200
+      ],
+      "primary_id": 200,
+      "p_delete": 0.0652,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0155.png"
+    },
+    {
+      "token_idx": 156,
+      "component_ids": [
+        201
+      ],
+      "primary_id": 201,
+      "p_delete": 0.0034,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0156.png"
+    },
+    {
+      "token_idx": 157,
+      "component_ids": [
+        202
+      ],
+      "primary_id": 202,
+      "p_delete": 0.2991,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0157.png"
+    },
+    {
+      "token_idx": 158,
+      "component_ids": [
+        203
+      ],
+      "primary_id": 203,
+      "p_delete": 0.2172,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0158.png"
+    },
+    {
+      "token_idx": 159,
+      "component_ids": [
+        204
+      ],
+      "primary_id": 204,
+      "p_delete": 0.0811,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0159.png"
+    },
+    {
+      "token_idx": 160,
+      "component_ids": [
+        205
+      ],
+      "primary_id": 205,
+      "p_delete": 0.2737,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0160.png"
+    },
+    {
+      "token_idx": 161,
+      "component_ids": [
+        206
+      ],
+      "primary_id": 206,
+      "p_delete": 0.1905,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0161.png"
+    },
+    {
+      "token_idx": 162,
+      "component_ids": [
+        207
+      ],
+      "primary_id": 207,
+      "p_delete": 0.0504,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0162.png"
+    },
+    {
+      "token_idx": 163,
+      "component_ids": [
+        208
+      ],
+      "primary_id": 208,
+      "p_delete": 0.1098,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0163.png"
+    },
+    {
+      "token_idx": 164,
+      "component_ids": [
+        209
+      ],
+      "primary_id": 209,
+      "p_delete": 0.09,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0164.png"
+    },
+    {
+      "token_idx": 165,
+      "component_ids": [
+        210
+      ],
+      "primary_id": 210,
+      "p_delete": 0.0396,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0165.png"
+    },
+    {
+      "token_idx": 166,
+      "component_ids": [
+        211
+      ],
+      "primary_id": 211,
+      "p_delete": 0.0192,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0166.png"
+    },
+    {
+      "token_idx": 167,
+      "component_ids": [
+        212
+      ],
+      "primary_id": 212,
+      "p_delete": 0.0447,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0167.png"
+    },
+    {
+      "token_idx": 168,
+      "component_ids": [
+        213
+      ],
+      "primary_id": 213,
+      "p_delete": 0.0535,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0168.png"
+    },
+    {
+      "token_idx": 169,
+      "component_ids": [
+        214
+      ],
+      "primary_id": 214,
+      "p_delete": 0.0616,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0169.png"
+    },
+    {
+      "token_idx": 170,
+      "component_ids": [
+        215
+      ],
+      "primary_id": 215,
+      "p_delete": 0.0056,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0170.png"
+    },
+    {
+      "token_idx": 171,
+      "component_ids": [
+        216
+      ],
+      "primary_id": 216,
+      "p_delete": 0.0113,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0171.png"
+    },
+    {
+      "token_idx": 172,
+      "component_ids": [
+        217
+      ],
+      "primary_id": 217,
+      "p_delete": 0.01,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0172.png"
+    },
+    {
+      "token_idx": 173,
+      "component_ids": [
+        218
+      ],
+      "primary_id": 218,
+      "p_delete": 0.2244,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0173.png"
+    },
+    {
+      "token_idx": 174,
+      "component_ids": [
+        219
+      ],
+      "primary_id": 219,
+      "p_delete": 0.863,
+      "label": "remove",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0174.png"
+    },
+    {
+      "token_idx": 175,
+      "component_ids": [
+        220
+      ],
+      "primary_id": 220,
+      "p_delete": 0.2886,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0175.png"
+    },
+    {
+      "token_idx": 176,
+      "component_ids": [
+        221
+      ],
+      "primary_id": 221,
+      "p_delete": 0.2784,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0176.png"
+    },
+    {
+      "token_idx": 177,
+      "component_ids": [
+        222
+      ],
+      "primary_id": 222,
+      "p_delete": 0.0371,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0177.png"
+    },
+    {
+      "token_idx": 178,
+      "component_ids": [
+        223
+      ],
+      "primary_id": 223,
+      "p_delete": 0.0233,
+      "label": "retain",
+      "crop_path": "tokenization_results\\sample_000002\\crops\\token_0178.png"
+    }
+  ]
+}

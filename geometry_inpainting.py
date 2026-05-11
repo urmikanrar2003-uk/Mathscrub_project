@@ -98,3 +98,83 @@ def inpaint_math_equation(gray_image, components, predictions, tau_p=0.5, T=1531
         restored_img = cv2.inpaint(restored_img, global_ns_mask, inpaintRadius=d, flags=cv2.INPAINT_NS)
         
     return restored_img
+
+if __name__ == "__main__":
+    import json
+    from pathlib import Path
+    from tqdm import tqdm
+
+    RESULTS_DIR = Path("./tokenization_results")
+    sample_dirs = sorted(RESULTS_DIR.glob("sample_*"))[:5]
+
+    if not sample_dirs:
+        print("No sample directories found. Run Phase 1 and Phase 2 first.")
+    else:
+        print(f"Running Phase 3 (Inpainting) on {len(sample_dirs)} samples...")
+        for sample_dir in tqdm(sample_dirs):
+            tokens_path = sample_dir / "tokens.json"
+            preds_path  = sample_dir / "classification_results.json"
+            img_path    = sample_dir / "original.png" # Saved by modified tokenization.py
+
+            if not tokens_path.exists() or not preds_path.exists():
+                print(f"  Skipping {sample_dir.name}: missing tokens.json or classification_results.json")
+                continue
+            
+            if not img_path.exists():
+                # Fallback: maybe it's named restored_img.png or we need to re-run Phase 1
+                # Let's try to find any image in the sample dir that isn't a mask/vis
+                img_path = next((p for p in sample_dir.glob("*.png") if p.name not in ["pipeline_steps.png", "classification_results.json", "restored_img.png"]), None)
+                if img_path is None:
+                    print(f"  Skipping {sample_dir.name}: original.png not found. Please re-run data_ingestion.py")
+                    continue
+
+            # Load data
+            img = cv2.imread(str(img_path))
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+            with open(tokens_path, "r") as f:
+                tokens_data = json.load(f)
+            with open(preds_path, "r") as f:
+                preds_data = json.load(f)
+
+            components = tokens_data["components"]
+            # preds_data["tokens"] is the list of predictions
+            # We need to map token predictions back to components
+            token_preds = preds_data["tokens"]
+            
+            # Map each component to its token's prediction
+            # Note: classification_results.json has "token_idx" and "label"
+            comp_preds = []
+            token_lookup = {t["token_idx"]: t for t in token_preds}
+            
+            for comp in components:
+                # We need to know which token this component belongs to
+                # In tokens.json, "tokens" is a list of component ID lists
+                found_token_idx = -1
+                for t_idx, t_group in enumerate(tokens_data["tokens"]):
+                    if comp["id"] in t_group:
+                        found_token_idx = t_idx
+                        break
+                
+                if found_token_idx != -1 and found_token_idx in token_lookup:
+                    p = token_lookup[found_token_idx]
+                    comp_preds.append({
+                        "component_id": comp["id"],
+                        "p_delete": p["p_delete"] if p["label"] != "unknown" else 0.0
+                    })
+                else:
+                    comp_preds.append({
+                        "component_id": comp["id"],
+                        "p_delete": 0.0
+                    })
+
+            # Run inpainting
+            # Equation parameters from MathScrub: tau_p=0.5, T=15316, d=5
+            restored = inpaint_math_equation(gray, components, comp_preds, tau_p=0.5, T=15316, d=5)
+
+            # Save result
+            out_path = sample_dir / "restored_img_final.png"
+            cv2.imwrite(str(out_path), restored)
+            print(f"  Saved: {out_path}")
+
+        print("\nPhase 3 complete!")

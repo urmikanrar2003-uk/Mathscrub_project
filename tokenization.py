@@ -604,7 +604,7 @@ def visualize_all_steps(
 
     if save_path:
         plt.savefig(save_path, dpi=150, bbox_inches="tight")
-        print(f"Visualization saved → {save_path}")
+        print(f"Visualization saved -> {save_path}")
     else:
         plt.show()
 
@@ -699,6 +699,10 @@ def process_pil_image(
                 y2 = min(H, max(b[1] + b[3] for b in bboxes) + 5)
                 cv2.imwrite(str(crops_dir / f"token_{t_idx:04d}.png"),
                             image_bgr[y1:y2, x1:x2])
+
+        # --- NEW: Save original image for Phase 3 ---
+        cv2.imwrite(str(sample_dir / "original.png"), image_bgr)
+        # Also save grayscale/binary if needed, but original BGR is best for viz.
 
     return meta
 
